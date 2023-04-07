@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2023_04_07_184527) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
+    t.string "admin_image"
     t.string "phone_number"
     t.string "password_digest"
     t.datetime "created_at", precision: 6, null: false
