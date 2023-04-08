@@ -34,9 +34,9 @@ ActiveRecord::Schema.define(version: 2023_04_08_082006) do
   end
 
   create_table "dairy_sells", force: :cascade do |t|
-    t.string "sell_date"
-    t.integer "sell_kgs"
-    t.string "sell_item"
+    t.string "sold_item"
+    t.integer "sold_price"
+    t.string "sold_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

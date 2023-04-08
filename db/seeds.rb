@@ -24,4 +24,6 @@
 # Animal.create(animal_name: "Lion",animal_image: "https://i.imgur.com/4ZQZQ0F.jpg",animal_type: "Mammal",animal_health: "Healthy",animal_age: 5)
 
     
-Milk.create(milk_kgs: 10,milk_date: "2021-04-08",animal_id: 1)
+# Milk.create(milk_kgs: 10,milk_date: "2021-04-08",animal_id: 1)
+# :sold_item , :sold_price, :sold_date)
+DairySell.create(sold_item: "Milk",sold_price: 10,sold_date: "2021-04-08")
