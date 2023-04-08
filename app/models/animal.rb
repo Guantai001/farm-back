@@ -1,4 +1,5 @@
 class Animal < ApplicationRecord
+    has_many :milks
 
     # VALIDATIONS on: :create only runs when creating a new animal
     validates :animal_name, presence: true, uniqueness: true, on: :create

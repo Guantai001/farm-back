@@ -25,7 +25,8 @@ Rails.application.routes.draw do
   post '/milks', to: 'milks#create'
   patch '/milks/:id', to: 'milks#update'
   delete '/milks/:id', to: 'milks#destroy'
-
-  
+  get '/milks/:id/milk_kgs', to: 'milks#milk_kgs'
+  get '/milk/total', to: 'milks#total'
+  get '/milk/:id/total_animal', to: 'milks#total_animal'
 
 end
