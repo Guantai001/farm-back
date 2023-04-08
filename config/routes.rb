@@ -30,4 +30,14 @@ Rails.application.routes.draw do
   get '/milk/total', to: 'milks#total'
   get '/milk/:id/total_animal', to: 'milks#total_animal'
 
+  # DAIRY_SELL ROUTES
+  get '/sells', to: 'dairy_sells#index'
+  get '/sells/:id', to: 'dairy_sells#show'
+  post '/sells', to: 'dairy_sells#create'
+  patch '/sells/:id', to: 'dairy_sells#update'
+  delete '/sells/:id', to: 'dairy_sells#destroy'
+  get '/sells/:id/total', to: 'dairy_sells#sold_price'
+  get '/sell/total', to: 'dairy_sells#total'
+
+
 end

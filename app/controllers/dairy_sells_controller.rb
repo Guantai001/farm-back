@@ -47,14 +47,32 @@ class DairySellsController < ApplicationController
         end
     end
 
-    # get dairy_sell_kgs for a specific dairy_sell record
-    def dairy_sell_kgs
+    #get the sold price for a specific dairy_sell record
+    def sold_price
         dairy_sell = DairySell.find(params[:id])
         if dairy_sell
-            render json: { message: "DairySell with id #{params[:id]} has #{dairy_sell.dairy_sell_kgs} kgs of dairy_sell" }
+            render json: { message: "DairySell with id #{params[:id]} has #{dairy_sell.sold_price} as sold price" }
         else
             render json: {error: "DairySell with id #{params[:id]} not found"}, status: :not_found
         end
+    end
+
+    # Total Dairy Sell
+    def total_dairy_sell
+       total = {}
+       DairySell.all.each do |dairy_sell|
+        if total[dairy_sell.sold_item] 
+            total[dairy_sell.sold_item] += dairy_sell.sold_price
+        else
+            total[dairy_sell.sold_item] = dairy_sell.sold_price
+          end
+        end
+        return total.values.sum
+    end
+    
+    def total
+        total = total_dairy_sell
+        render json: { message: "Total Dairy Sell is #{total}" }
     end
 
     private
@@ -64,5 +82,7 @@ class DairySellsController < ApplicationController
     end
 
     def render_unprocessable_entity_response(invalid)
-        render json: { errors: invalid.record.errors }, status: :unprocessable`
+        render json: { errors: invalid.record.errors }, status: :unprocessable_entity
+    end
+
 end
