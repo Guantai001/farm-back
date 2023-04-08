@@ -26,4 +26,8 @@
     
 # Milk.create(milk_kgs: 10,milk_date: "2021-04-08",animal_id: 1)
 # :sold_item , :sold_price, :sold_date)
-DairySell.create(sold_item: "Milk",sold_price: 10,sold_date: "2021-04-08")
+# DairySell.create(sold_item: "Milk",sold_price: 10,sold_date: "2021-04-08")
+
+# :cost_date, :cost_item, :cost_price
+
+ DairyCost.create(cost_date: "2021-04-08",cost_item: "Milk",cost_price: 600)

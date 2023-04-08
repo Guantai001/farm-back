@@ -1,3 +1,3 @@
 class DairyCostSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id,  :cost_date, :cost_item, :cost_price
 end

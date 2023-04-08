@@ -1,11 +1,4 @@
 Rails.application.routes.draw do
-  
-  resources :dairy_costs
-  resources :dairy_sells
-  resources :milks
-  resources :animals
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
 
   # ADMIN ROUTES
   get '/', to: 'admins#index'
@@ -39,6 +32,16 @@ Rails.application.routes.draw do
   delete '/sells/:id', to: 'dairy_sells#destroy'
   get '/sells/:id/total', to: 'dairy_sells#sold_price'
   get '/sell/total', to: 'dairy_sells#total'
+
+  # DAIRY_COST ROUTES
+  get '/costs', to: 'dairy_costs#index'
+  get '/costs/:id', to: 'dairy_costs#show'
+  post '/costs', to: 'dairy_costs#create'
+  patch '/costs/:id', to: 'dairy_costs#update'
+  delete '/costs/:id', to: 'dairy_costs#destroy'
+  get '/costs/:id/total', to: 'dairy_costs#cost_price'
+  get '/cost/total', to: 'dairy_costs#total'
+
 
 
 end
