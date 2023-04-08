@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :milk_prices
   # ADMIN ROUTES
   get '/', to: 'admins#index'
   get '/admins/:id', to: 'admins#show'
@@ -42,6 +43,12 @@ Rails.application.routes.draw do
   get '/costs/:id/total', to: 'dairy_costs#cost_price'
   get '/cost/total', to: 'dairy_costs#total'
 
+  # MILK_PRICE ROUTES
+  get '/prices', to: 'milk_prices#index'
+  get '/prices/:id', to: 'milk_prices#show'
+  post '/prices', to: 'milk_prices#create'
+  patch '/prices/:id', to: 'milk_prices#update'
+  delete '/prices/:id', to: 'milk_prices#destroy'
 
 
 end

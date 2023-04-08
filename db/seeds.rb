@@ -30,4 +30,6 @@
 
 # :cost_date, :cost_item, :cost_price
 
- DairyCost.create(cost_date: "2021-04-08",cost_item: "Milk",cost_price: 600)
+#  DairyCost.create(cost_date: "2021-04-08",cost_item: "Milk",cost_price: 600)
+# :milk_price, 
+MilkPrice.create(milk_price: 10)
