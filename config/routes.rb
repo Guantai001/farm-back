@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :dairy_costs
   resources :dairy_sells
   resources :milks
   resources :animals
