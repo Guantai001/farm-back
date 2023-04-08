@@ -21,6 +21,7 @@
 
 # Admin.create(first_name: "John",last_name: "Doe",email: "jpe@gmil.com",phone_number: "0790070535",admin_image: "https://i.imgur.com/4ZQZQ0F.jpg",password_digest: "123456")
 
-Animal.create(animal_name: "Lion",animal_image: "https://i.imgur.com/4ZQZQ0F.jpg",animal_type: "Mammal",animal_health: "Healthy",animal_age: 5)
+# Animal.create(animal_name: "Lion",animal_image: "https://i.imgur.com/4ZQZQ0F.jpg",animal_type: "Mammal",animal_health: "Healthy",animal_age: 5)
 
     
+Milk.create(milk_kgs: 10,milk_date: "2021-04-08",animal_id: 1)
